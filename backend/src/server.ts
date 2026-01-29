@@ -46,7 +46,7 @@ app.post("/checkout-payment" , async(req : Request , res:Response) => {
           price_data : {
                 product_data : { name : item.name},
                 currency : "eur",
-                unit_amount : item.price *1000, // 30 euro 
+                unit_amount : item.price *100, // 30 euro 
             },
             quantity : item.quantity
     }
