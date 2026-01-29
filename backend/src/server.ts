@@ -8,7 +8,6 @@ import DBConnect  from "./config/configDB/dbConnect.js"
 import cors from "cors"
 import corsOptions from "./config/configCors/corsOptions.js"
 
-import userRoutes from "./routes/userRoutes.js"
 
 
 import { stripe } from "./config/stripe.js"
@@ -36,7 +35,6 @@ app.use(express.json())
 app.get("/" , (req:Request , res:Response) => {
     return res.status(200).json({success: true , message: "API" , version:"1.0.0"})
 })
-app.use("/api/user" , userRoutes)
 
 
 app.post("/checkout-payment" , async(req : Request , res:Response) => {
